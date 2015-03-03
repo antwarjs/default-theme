@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/antwarjs/default-theme/issues"
   },
-  "homepage": "https://github.com/antwarjs/default-theme"
+  "homepage": "https://github.com/antwarjs/default-theme",
+  "peerDependencies": {
+    "react": "^0.12.2"
+  }
 }
