@@ -1,6 +1,6 @@
 React = require 'react'
 Nav = React.createFactory require './Nav'
-
+require './scss/main.scss'
 { div, main } = require 'react-coffee-elements'
 
 module.exports = React.createClass

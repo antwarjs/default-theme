@@ -21,3 +21,4 @@ module.exports = React.createClass
 				if post.draft then span className: 'draft-text', ' Draft'
 				div dangerouslySetInnerHTML: __html: post.content
 			Moment className: 'post__moment', datetime: post.date
+			if post.author then div className: 'post__author', "Authored by #{post.author}"

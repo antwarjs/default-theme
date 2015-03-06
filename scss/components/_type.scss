@@ -57,9 +57,17 @@ p {
 pre, code {
 	font-family: $code-font;
 	font-weight: 400;
+	background-color: $background-alt-color;
+	border-radius: $brand-round;
+	padding: $half-spacing-unit / 2;
 	@include font-size($deci-size);
 }
-
+pre {
+	margin-bottom: $base-spacing-unit;
+}
+pre > code {
+	padding: 0;
+}
 .section-heading {
 	margin-top: $base-spacing-unit * 2;
 	margin-bottom: $base-spacing-unit;

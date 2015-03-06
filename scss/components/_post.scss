@@ -40,3 +40,7 @@
 	margin-top: 100vh;
 	padding-top: $base-spacing-unit * 2;
 }
+
+.post__author {
+	@extend time;
+}
