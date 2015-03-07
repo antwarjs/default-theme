@@ -1,5 +1,8 @@
 .post-list {
 	list-style: none;
+	li:before {
+		content: '';
+	}
 }
 .post-list__heading {
 	margin: 0;
