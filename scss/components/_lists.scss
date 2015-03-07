@@ -1,6 +1,9 @@
 ul {
-	// list-style:none;
+	list-style:none;
 	// margin-left:0;
 }
 li {
+	&:before {
+		content: '- '
+	}
 }
