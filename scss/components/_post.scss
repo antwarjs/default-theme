@@ -24,17 +24,23 @@
 	background-size: cover;
 	background-position: 50% 50%;
 	z-index: -1;
-	filter: brightness(0.6);
+	filter: brightness(0.4);
 }
 .header-image + .post__heading {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100vw;
-	margin-top: 50vh;
+	margin-top: calc(50vh - #{$base-spacing-unit * 2}); //Subtract footer links height
 	text-align: center;
 	color: #fff;
 	transform: translateY(-50%);
+	> h1 {
+		margin-top: 0;
+	}
+	> h3  {
+		margin-top: 0;
+	}
 }
 .header-image + .post__heading + .post__content {
 	margin-top: 100vh;

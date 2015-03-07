@@ -1,0 +1,17 @@
+.front__buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-top: $base-spacing-unit * 2.5;
+	> .btn {
+		margin: 0 $half-spacing-unit;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

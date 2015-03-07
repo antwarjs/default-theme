@@ -65,7 +65,7 @@ $border-color:								mix($background-color, $font-color, 85%)!default;
 $quiet-border-color:					mix($background-color, $font-color, $heavy-tint)!default;
 $heavy-border-color:					darken($border-color, 8%);
 
-$border-width:								1px!default;
+$border-width:								2px!default;
 
 $border:								$border-width $border-color solid!default;
 $action-border:								$border-width $action-color solid!default;
