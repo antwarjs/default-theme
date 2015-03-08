@@ -127,7 +127,6 @@ pre > code {
 time {
 	font-family: $small-font;
 	color: $quiet-font-color;
-	margin-bottom: $base-spacing-unit;
 	@include font-size($deci-size);
 }
 
