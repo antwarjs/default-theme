@@ -15,7 +15,7 @@ module.exports = React.createClass
 	render: ->
 		post = @getPost()
 		author = post.author or config.site.author
-		div {className: 'post', onTouchMove: @touchMove},
+		div {className: 'post'},
 			if post.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{post.headerImage})"
 			h1 {className: 'post__heading'},
 				post.title
