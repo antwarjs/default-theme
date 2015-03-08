@@ -2,7 +2,7 @@ React = require('react')
 Router = require('react-router')
 Link = React.createFactory Router.Link
 Moment = React.createFactory require('./Moment')
-Paths = require('elements/PathsMixin')
+Paths = require('antwar-core/PathsMixin')
 _ = require('lodash')
 
 { div, li, p, ul, h1, h3, span } = require 'react-coffee-elements'
