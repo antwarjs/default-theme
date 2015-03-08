@@ -15,7 +15,7 @@ module.exports = React.createClass
 
 	render: ->
 		nav {className: 'nav'},
-			_.map Config.theme.navigation, (link) ->
+			_.map Config.site.theme.navigation, (link) ->
 				Link
 					className: 'nav__link'
 					to: link.path
