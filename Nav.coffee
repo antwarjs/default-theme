@@ -1,6 +1,6 @@
 React = require 'react'
 Router = require 'react-router'
-PathsMixin = require 'antwar-core/PathsMixin.coffee'
+PathsMixin = require 'antwar-core/PathsMixin'
 Link = React.createFactory Router.Link
 _ = require 'lodash'
 Config = require 'config'
