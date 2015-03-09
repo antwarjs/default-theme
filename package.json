@@ -22,5 +22,8 @@
   "homepage": "https://github.com/antwarjs/default-theme",
   "peerDependencies": {
     "react": "^0.12.2"
+  },
+  "dependencies": {
+    "react-coffee-elements": "^0.1.0"
   }
 }
