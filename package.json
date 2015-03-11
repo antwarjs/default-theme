@@ -1,6 +1,6 @@
 {
   "name": "antwar-default-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Default theme for antwar",
   "main": "index.js",
   "scripts": {
