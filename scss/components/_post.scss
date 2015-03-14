@@ -23,18 +23,21 @@
 	background: $brand-dark;
 	background-size: cover;
 	background-position: 50% 50%;
-	z-index: -1;
+	z-index: 10;
 	filter: brightness(0.4);
+	@include layer;
 }
 .header-image + .post__heading {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100vw;
-	margin-top: calc(50vh - #{$base-spacing-unit * 2}); //Subtract footer links height
+	margin-top: calc(50vh); //Subtract footer links height
 	text-align: center;
 	color: #fff;
 	transform: translateY(-50%);
+	z-index: 15;
+	@include layer;
 	> h1 {
 		margin-top: 0;
 	}
