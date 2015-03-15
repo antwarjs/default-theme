@@ -14,7 +14,7 @@ module.exports = React.createClass
 
 	render: ->
 		post = @getPost()
-		author = post.author or config.site.author
+		author = post.author or config.site.author.name
 		div {className: 'post'},
 			if post.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{post.headerImage})"
 			h1 {className: 'post__heading'},
