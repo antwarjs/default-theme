@@ -9,25 +9,25 @@ _ = require('lodash')
 
 module.exports = React.createClass
 
-	displayName: 'Blog'
+  displayName: 'Blog'
 
-	mixins: [
-		Router.State
-		Paths
-	]
+  mixins: [
+    Router.State
+    Paths
+  ]
 
-	render: ->
-		div {className: 'grid'},
-			h1 'Blog posts'
-			ul { className: 'post-list'},
-				_.map _.sortBy(@getAllPosts(), 'date').reverse(), (post) =>
-					li key: post.url,
-						h3 {className: 'post-list__heading'},
-							Link
-								to: '/blog/' + post.url
-							, post.title
-							if post.draft then span className: 'draft-text', ' Draft'
-						Moment
-							datetime: post.date
-						p {className: 'post-list__preview'},
-							post.preview
+  render: ->
+    div {className: 'grid'},
+      h1 'Blog posts'
+      ul { className: 'post-list'},
+        _.map _.sortBy(@getAllPosts(), 'date').reverse(), (post) =>
+          li key: post.url,
+            h3 {className: 'post-list__heading'},
+              Link
+                to: '/blog/' + post.url
+              , post.title
+              if post.draft then span className: 'draft-text', ' Draft'
+            Moment
+              datetime: post.date
+            p {className: 'post-list__preview'},
+              post.preview
