@@ -4,20 +4,24 @@
 	left: 0;
 	right: 0;
 	flex-direction: row;
-	background-color: rgba(#000, .6);
+	background-color: rgba(lighten($action-color, 50%), .6);
 	z-index: 5;
 	justify-content: center;
 	@include layer;
 }
 
 .nav__link {
+	text-transform: uppercase;
+	letter-spacing: 4px;
 	display: inline-block;
-	padding: $half-spacing-unit;
-	color: $background-color;
+	font-weight: $bold;
+	padding: $half-spacing-unit $base-spacing-unit;
+	// color: $background-color;
 	font-family: $header-font;
 	transition: color $transition-easing $transition-speed;
+	@include font-size($deci-size);
 	&:hover {
 
-		color: lighten($brand-blue, 20%);
+		color: darken($action-color, 25%);
 	}
 }

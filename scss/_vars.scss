@@ -55,9 +55,9 @@ $light-tint:									97%!default;
 
 // UI element colors
 
-$action-color:								$brand-blue!default;
-$action-color-light:					lighten($brand-blue, 10%)!default;
-$action-color-dark:						darken($brand-blue, 10%)!default;
+$action-color:								#60A9FF!default;
+$action-color-light:					lighten($action-color, 10%)!default;
+$action-color-dark:						darken($action-color, 10%)!default;
 
 
 // Borders

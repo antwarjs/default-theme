@@ -28,6 +28,6 @@
 	color: $background-color;
 	&:hover {
 		background-color: $background-color;
-		color: $font-color;
+		color: darken($action-color, 30%);
 	}
 }
