@@ -3,6 +3,7 @@ Router = require('react-router')
 Link = React.createFactory Router.Link
 Moment = React.createFactory require('./Moment')
 Paths = require('antwar-core/PathsMixin')
+BlogLink = require('antwar-core/BlogLink')
 _ = require('lodash')
 
 { div, li, p, ul, h1, h3, span } = require 'react-coffee-elements'
@@ -23,8 +24,8 @@ module.exports = React.createClass
         _.map _.sortBy(@getAllPosts(), 'date').reverse(), (post) =>
           li key: post.url,
             h3 {className: 'post-list__heading'},
-              Link
-                to: '/blog/' + post.url
+              BlogLink
+                post: post
               , post.title
               if post.draft then span className: 'draft-text', ' Draft'
             Moment
