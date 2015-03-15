@@ -48,11 +48,6 @@ module.exports = {
         },
         {
           test: /\.coffee$/,
-          exclude: ReactHotLoaderMatches,
-          loader: 'react-hot!coffee-loader',
-        },
-        {
-          test: ReactHotLoaderMatches,
           loader: 'react-hot!coffee-loader',
         },
       ]
