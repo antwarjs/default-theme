@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	flex-direction: row;
-	background-color: rgba(lighten($action-color, 50%), .6);
+	background: linear-gradient(to top, #fff, rgba(#fff, 0));
 	z-index: 5;
 	justify-content: center;
 	@include layer;
