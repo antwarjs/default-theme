@@ -1,6 +1,6 @@
 .post {
 	align-self: center;
-	margin-bottom: $base-spacing-unit * 5;
+	margin-bottom: $base-spacing-unit * 3;
 	@include media-query('palm') {
 		padding: 0 $half-spacing-unit;
 	}
@@ -74,7 +74,7 @@
 .post__author,
 .post__moment {
 	margin-bottom: $base-spacing-unit;
-	align-self: center;
+	padding: 0 $base-spacing-unit;
 }
 .post__author {
 	@extend time;

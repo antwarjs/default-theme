@@ -10,5 +10,7 @@ ul {
 }
 li {
 	margin-bottom: $base-spacing-unit;
-	margin-left: 1em;
+	@include media-query($max-width + $base-spacing-unit * 2) {
+		margin-left: 1em;
+	}
 }
