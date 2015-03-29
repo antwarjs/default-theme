@@ -1,9 +1,14 @@
 ul {
 	list-style:none;
-	// margin-left:0;
+	>li {
+		&:before {
+			content: '- ';
+			position: absolute;
+			margin-left: -1em;
+		}
+	}
 }
 li {
-	&:before {
-		content: '- '
-	}
+	margin-bottom: $base-spacing-unit;
+	margin-left: 1em;
 }
