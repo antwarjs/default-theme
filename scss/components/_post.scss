@@ -1,5 +1,6 @@
 .post {
 	align-self: center;
+	padding: 0 $base-spacing-unit;
 	margin-bottom: $base-spacing-unit * 3;
 	@include media-query('palm') {
 		padding: 0 $half-spacing-unit;
@@ -16,8 +17,8 @@
 	pre {
 		width: $max-width;
 		max-width: 100vw;
-		padding: 0 $base-spacing-unit;
 	}
+
 	img {
 		width: 90vw;
 		position: relative;
@@ -29,7 +30,6 @@
 	}
 
 	> * {
-		margin-bottom: $base-spacing-unit * 2;
 		@include media-query('palm') {
 			@include font-size(16px);
 		}
@@ -74,7 +74,7 @@
 .post__author,
 .post__moment {
 	margin-bottom: $base-spacing-unit;
-	padding: 0 $base-spacing-unit;
+	// padding: 0 $base-spacing-unit;
 }
 .post__author {
 	@extend time;
