@@ -30,7 +30,7 @@
     "extract-text-webpack-plugin": "^0.3.8",
     "moment": "^2.9.0",
     "react-coffee-elements": "^0.1.0",
-    "sass-loader": "^0.5.0",
+    "sass-loader": "^1.0.0",
     "webpack": "^1.7.3"
   }
 }

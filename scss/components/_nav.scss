@@ -17,7 +17,6 @@
 	display: inline-block;
 	font-weight: $bold;
 	padding: $half-spacing-unit $base-spacing-unit;
-	// color: $background-color;
 	font-family: $header-font;
 	transition: color $transition-easing $transition-speed;
 	@include font-size($deci-size);
