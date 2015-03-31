@@ -17,7 +17,7 @@
 	display: inline-block;
 	font-weight: $bold;
 	padding: $half-spacing-unit $base-spacing-unit;
-	font-family: $header-font;
+	font-family: $heading-font;
 	transition: color $transition-easing $transition-speed;
 	@include font-size($deci-size);
 	&:hover {
