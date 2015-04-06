@@ -1,27 +1,104 @@
-.nav {
+$line-height: 3px;
+
+.nav__wrapper {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	pointer-events: none;
+}
+.nav {
 	flex-direction: row;
 	background: linear-gradient(to top, #fff, rgba(#fff, 0));
 	z-index: 5;
 	justify-content: center;
 	padding-top: $base-spacing-unit;
 	@include layer;
+	@include media-query(palm) {
+		box-shadow: 0 0 8px rgba(#000, 0.1);
+		transform: translateY(100%);
+		margin-bottom: $base-spacing-unit * 2;
+		background-color: #fff;
+		transition: transform $transition-easing $transition-speed;
+		pointer-events: all;
+		.nav__toggle:checked ~ & {
+			transform: translateY(0);
+			// visibility: visible;
+		}
+	}
 }
 
-.nav__link {
+.nav__link,
+.nav__toggle-label {
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	display: inline-block;
 	font-weight: $bold;
-	padding: $half-spacing-unit $base-spacing-unit;
+	pointer-events: all;
 	font-family: $heading-font;
+
+}
+.nav__link {
+	display: inline-block;
+	padding: $half-spacing-unit $base-spacing-unit;
 	transition: color $transition-easing $transition-speed;
 	@include font-size($deci-size);
 	&:hover {
-
 		color: darken($action-color, 25%);
+	}
+	@include media-query(palm) {
+		text-align: center;
+		width: 100%;
+	}
+}
+.nav__toggle {
+	display: none;
+}
+.nav__toggle-label {
+	display: none;
+	text-align: center;
+	color: darken($action-color, 30%);
+	padding: $half-spacing-unit 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: $base-spacing-unit * 2;
+	right: 0;
+	z-index: 100;
+	background-color: #fff;
+	&:before {
+		top: $base-spacing-unit - $line-height * 2;
+	}
+	&:after {
+		top: $base-spacing-unit + $line-height * 2;
+	}
+	&:before,
+	&:after {
+		content: '';
+		width: $base-spacing-unit;
+		height: $line-height;
+		background-color: darken($action-color, 30%);
+		border-radius: $line-height;
+		position: absolute;
+		// top: 50%;
+		left: calc(50% - #{$half-spacing-unit});
+		transform-origin: 50% 50%;
+		transition: transform $transition-speed $transition-easing 0s,
+				top $transition-speed $transition-easing $transition-speed ;
+		.nav__toggle:checked ~ & {
+			transition: transform $transition-speed $transition-easing $transition-speed,
+				top $transition-speed $transition-easing 0s ;
+
+		}
+	}
+		.nav__toggle:checked ~ &:after {
+			transform: rotate(-45deg);
+			top: $base-spacing-unit;
+		}
+		.nav__toggle:checked ~ &:before {
+			transform: rotate(45deg);
+			top: $base-spacing-unit;
+		}
+	@include media-query(palm) {
+		display: block;
 	}
 }

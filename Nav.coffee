@@ -5,7 +5,7 @@ Link = React.createFactory Router.Link
 _ = require 'lodash'
 Config = require 'config'
 
-{ nav, div, a } = require 'react-coffee-elements'
+{ nav, div, a, input, label } = require 'react-coffee-elements'
 
 module.exports = React.createClass
 
@@ -14,10 +14,13 @@ module.exports = React.createClass
 	mixins: [ PathsMixin ]
 
 	render: ->
-		nav {className: 'nav'},
-			_.map Config.theme.navigation, (link) ->
-				Link
-					className: 'nav__link'
-					to: link.path
-					key: link.path
-				, link.title
+		div {className: 'nav__wrapper'},
+			input type: 'checkbox', className: 'nav__toggle', id: 'nav__toggle'
+			label {className: 'nav__toggle-label', htmlFor: 'nav__toggle'}
+			nav {className: 'nav'},
+				_.map Config.theme.navigation, (link) ->
+					Link
+						className: 'nav__link'
+						to: link.path
+						key: link.path
+					, link.title
