@@ -6,6 +6,10 @@ $line-height: 3px;
 	left: 0;
 	right: 0;
 	pointer-events: none;
+	@include media-query(palm) {
+		bottom: auto;
+		top: 0;
+	}
 }
 .nav {
 	flex-direction: row;
@@ -15,14 +19,15 @@ $line-height: 3px;
 	padding-top: $base-spacing-unit;
 	@include layer;
 	@include media-query(palm) {
-		box-shadow: 0 0 8px rgba(#000, 0.1);
-		transform: translateY(100%);
-		margin-bottom: $base-spacing-unit * 2;
+		transform: translateY(-100%);
+		opacity: 0;
 		background-color: #fff;
-		transition: transform $transition-easing $transition-speed;
+		transition: all $transition-easing $transition-speed;
 		pointer-events: all;
 		.nav__toggle:checked ~ & {
+			opacity: 1;
 			transform: translateY(0);
+			box-shadow: 0 0 8px rgba(#000, 0.1);
 			// visibility: visible;
 		}
 	}
@@ -55,13 +60,14 @@ $line-height: 3px;
 }
 .nav__toggle-label {
 	display: none;
+	width: $base-spacing-unit * 2;
+	height: $base-spacing-unit * 2;
+	border-radius: 50%;
 	text-align: center;
 	color: darken($action-color, 30%);
 	padding: $half-spacing-unit 0;
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: $base-spacing-unit * 2;
+	top: 0;
 	right: 0;
 	z-index: 100;
 	background-color: #fff;
@@ -79,7 +85,6 @@ $line-height: 3px;
 		background-color: darken($action-color, 30%);
 		border-radius: $line-height;
 		position: absolute;
-		// top: 50%;
 		left: calc(50% - #{$half-spacing-unit});
 		transform-origin: 50% 50%;
 		transition: transform $transition-speed $transition-easing 0s,
