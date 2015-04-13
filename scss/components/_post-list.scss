@@ -1,7 +1,12 @@
 .post-list {
 	list-style: none;
-	li:before {
-		content: '';
+	li {
+		&:before {
+			content: '';
+		}
+		@include media-query($max-width + $base-spacing-unit * 2) {
+			margin-left: 0;
+		}
 	}
 }
 .post-list__heading {
