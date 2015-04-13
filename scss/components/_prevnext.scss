@@ -1,0 +1,17 @@
+.prevnext {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: $base-spacing-unit * 2 0;
+	// font-size: $centi-size;
+	@extend .centi;
+}
+
+.prevnext__next,
+.prevnext__prev {
+	flex-direction: column;
+}
+.prevnext__next {
+	flex-grow: 1;
+	text-align: right;
+}

@@ -100,15 +100,18 @@ blockquote {
 	line-height: $base-line-height * 1.5;
 }
 .centi {
-    @include font-size($centi-size);
+	font-family: $small-font;
+	@include font-size($centi-size);
 }
 .small,
 .milli {
-    @include font-size($milli-size);
+	font-family: $small-font;
+	@include font-size($milli-size);
 }
 .micro,
 .tiny {
-    @include font-size($micro-size);
+	font-family: $small-font;
+	@include font-size($micro-size);
 }
 
 .quiet {
