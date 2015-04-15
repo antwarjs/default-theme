@@ -30,9 +30,9 @@ module.exports = React.createClass
 							div {className: 'prevnext__prev'},
 								div {className: 'prevnext__bg', style: backgroundImage: "url(#{post.prev.headerImage})"}
 								span className: 'prevnext__info', 'You might alos like'
-								a className: 'prevnext__link', href: post.prev.url, post.prev.title
+								a className: 'prevnext__link', href: "/#{config.blogRoot}/#{post.prev.url}", post.prev.title
 					if post.next
 							div {className: 'prevnext__next'},
 								div {className: 'prevnext__bg', style: backgroundImage: "url(#{post.next.headerImage})"}
 								span className: 'prevnext__info', 'Next post'
-								a className: 'prevnext__link', href: post.next.url, post.next.title
+								a className: 'prevnext__link', href: "/#{config.blogRoot}/#{post.next.url}", post.next.title
