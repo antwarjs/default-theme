@@ -22,7 +22,7 @@ module.exports = React.createClass
 			div className: 'post__content',
 				if post.draft then span className: 'draft-text', ' Draft'
 				div dangerouslySetInnerHTML: __html: post.content
-			Moment className: 'post__moment', datetime: post.date
+			if post.date then Moment className: 'post__moment', datetime: post.date
 			if author then div className: 'post__author', "Authored by #{author}"
 			if post.next or post.prev
 				div className: 'prevnext',
