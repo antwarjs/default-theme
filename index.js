@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('lodash');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var ReactHotLoaderMatches = /View.coffee|Pages\//;
@@ -52,5 +53,11 @@ module.exports = {
         },
       ]
     }
-  }
+  },
+  functions: {
+    url: function(file, fileName) {
+        // clean the filename to get the url
+        return _.kebabCase(fileName.slice(11), fileName.length - 3);
+    }
+  },
 };
