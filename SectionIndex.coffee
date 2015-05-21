@@ -22,15 +22,15 @@ module.exports = React.createClass
 		div {className: 'grid'},
 			h1 config.theme.sectionTitle or 'Blog posts'
 			ul { className: 'post-list'},
-				_.map _.sortBy(@getAllPosts(), 'date').reverse(), (post) =>
-					li key: post.url,
+				_.map _.sortBy(@getAllItems(), 'date').reverse(), (item) =>
+					li key: item.url,
 						h3 {className: 'post-list__heading'},
 							BlogLink
-								post: post
-							, post.title
-							if post.draft then span className: 'draft-text', ' Draft'
-						if post.date
+								item: item
+							, item.title
+							if item.draft then span className: 'draft-text', ' Draft'
+						if item.date
 							MomentDisplay
-								datetime: post.date
+								datetime: item.date
 						p {className: 'post-list__preview'},
-							post.preview
+							item.preview
