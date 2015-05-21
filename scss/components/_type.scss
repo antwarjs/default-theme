@@ -39,6 +39,7 @@ h1 {
 }
 h2 {
 	@include font-size($h2-size);
+	font-weight: $fat;
 }
 h3 {
 	@include font-size($h3-size);

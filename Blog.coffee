@@ -1,7 +1,7 @@
 React = require('react')
 Router = require('react-router')
 Link = React.createFactory Router.Link
-Moment = React.createFactory require('./Moment')
+MomentDisplay = React.createFactory require('./MomentDisplay')
 Paths = require('antwar-core/PathsMixin')
 BlogLink = React.createFactory require('antwar-core/BlogLink')
 config = require 'config'
@@ -30,7 +30,7 @@ module.exports = React.createClass
 							, post.title
 							if post.draft then span className: 'draft-text', ' Draft'
 						if post.date
-							Moment
+							MomentDisplay
 								datetime: post.date
 						p {className: 'post-list__preview'},
 							post.preview

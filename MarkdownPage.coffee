@@ -1,5 +1,4 @@
 React = require 'react'
-Moment = React.createFactory require './Moment'
 Paths = require 'antwar-core/PathsMixin'
 Router = require 'react-router'
 config = require 'config'

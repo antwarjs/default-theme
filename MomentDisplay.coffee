@@ -5,7 +5,7 @@ moment = require('moment')
 
 module.exports = React.createClass
 
-	displayName: 'Moment'
+	displayName: 'MomentDisplay'
 
 	getDefaultProps: ->
 		format: 'D MMM YYYY'
