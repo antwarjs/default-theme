@@ -11,7 +11,7 @@ _ = require('lodash')
 
 module.exports = React.createClass
 
-	displayName: 'Blog'
+	displayName: 'SectionIndex'
 
 	mixins: [
 		Router.State
@@ -20,7 +20,7 @@ module.exports = React.createClass
 
 	render: ->
 		div {className: 'grid'},
-			h1 config.theme.blogTitle or 'Blog posts'
+			h1 config.theme.sectionTitle or 'Blog posts'
 			ul { className: 'post-list'},
 				_.map _.sortBy(@getAllPosts(), 'date').reverse(), (post) =>
 					li key: post.url,
