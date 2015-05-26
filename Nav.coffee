@@ -1,7 +1,5 @@
 React = require 'react'
-Router = require 'react-router'
 PathsMixin = require 'antwar-core/PathsMixin'
-Link = React.createFactory Router.Link
 _ = require 'lodash'
 Config = require 'config'
 
@@ -19,8 +17,4 @@ module.exports = React.createClass
 			label {className: 'nav__toggle-label', htmlFor: 'nav__toggle'}
 			nav {className: 'nav'},
 				_.map Config.theme.navigation, (link) ->
-					Link
-						className: 'nav__link'
-						to: link.path
-						key: link.path
-					, link.title
+					a {className: 'nav__link', href: link.path, key: link.path}, link.title
