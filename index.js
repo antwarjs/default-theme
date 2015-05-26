@@ -59,10 +59,4 @@ module.exports = {
       }
     };
   },
-  functions: {
-    url: function(file, fileName) {
-        // clean the filename to get the url
-        return _.kebabCase(fileName.slice(11), fileName.length - 3);
-    }
-  },
 };
