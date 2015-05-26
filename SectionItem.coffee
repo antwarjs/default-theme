@@ -24,15 +24,3 @@ module.exports = React.createClass
 				div dangerouslySetInnerHTML: __html: item.content
 			if item.date then MomentDisplay className: 'post__moment', datetime: item.date
 			if author then div className: 'post__author', "Authored by #{author}"
-			if item.next or item.prev
-				div className: 'prevnext',
-					if item.prev
-							div {className: 'prevnext__prev'},
-								div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.prev.headerImage})"}
-								span className: 'prevnext__info', 'You might alos like'
-								a className: 'prevnext__link', href: "/#{config.blogRoot}/#{item.prev.url}", item.prev.title
-					if item.next
-							div {className: 'prevnext__next'},
-								div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.next.headerImage})"}
-								span className: 'prevnext__info', 'Next item'
-								a className: 'prevnext__link', href: "/#{config.blogRoot}/#{item.next.url}", item.next.title
