@@ -1,5 +1,6 @@
 React = require 'react'
 PathsMixin = require 'antwar-core/PathsMixin'
+NavigationLink = React.createFactory require 'antwar-core/NavigationLink'
 _ = require 'lodash'
 Config = require 'config'
 
@@ -16,5 +17,6 @@ module.exports = React.createClass
             input type: 'checkbox', className: 'nav__toggle', id: 'nav__toggle'
             label {className: 'nav__toggle-label', htmlFor: 'nav__toggle'}
             nav {className: 'nav'},
-                _.map Config.theme.navigation, (link) ->
-                    a {className: 'nav__link', href: link.path, key: link.path}, link.title
+                _.map Config.theme.navigation, (link, i) ->
+                    div {key: 'link-' + i, className: 'nav__link'},
+                        NavigationLink {item: link}
