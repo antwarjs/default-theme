@@ -22,7 +22,7 @@ module.exports = React.createClass
         div {className: 'grid'},
             h1 config.theme.sectionTitle or 'Blog posts'
             ul { className: 'post-list'},
-                _.map _.sortBy(@getSectionItems(), 'date'), (item) =>
+                _.map @getSectionItems(), (item) =>
                     li key: item.url,
                         h3 {className: 'post-list__heading'},
                             SectionLink
