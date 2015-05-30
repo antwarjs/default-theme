@@ -7,14 +7,14 @@ Config = require 'config'
 
 module.exports = React.createClass
 
-	displayName: 'Nav'
+    displayName: 'Nav'
 
-	mixins: [ PathsMixin ]
+    mixins: [ PathsMixin ]
 
-	render: ->
-		div {className: 'nav__wrapper'},
-			input type: 'checkbox', className: 'nav__toggle', id: 'nav__toggle'
-			label {className: 'nav__toggle-label', htmlFor: 'nav__toggle'}
-			nav {className: 'nav'},
-				_.map Config.theme.navigation, (link) ->
-					a {className: 'nav__link', href: link.path, key: link.path}, link.title
+    render: ->
+        div {className: 'nav__wrapper'},
+            input type: 'checkbox', className: 'nav__toggle', id: 'nav__toggle'
+            label {className: 'nav__toggle-label', htmlFor: 'nav__toggle'}
+            nav {className: 'nav'},
+                _.map Config.theme.navigation, (link) ->
+                    a {className: 'nav__link', href: link.path, key: link.path}, link.title

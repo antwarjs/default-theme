@@ -5,20 +5,20 @@ moment = require('moment')
 
 module.exports = React.createClass
 
-	displayName: 'MomentDisplay'
+    displayName: 'MomentDisplay'
 
-	getDefaultProps: ->
-		format: 'D MMM YYYY'
-		style: {}
+    getDefaultProps: ->
+        format: 'D MMM YYYY'
+        style: {}
 
-	propTypes:
-		datetime: React.PropTypes.string.isRequired
-		format: React.PropTypes.string
+    propTypes:
+        datetime: React.PropTypes.string.isRequired
+        format: React.PropTypes.string
 
-	render: ->
-		time
-			dateTime: @props.datetime
-			className: @props.className
-		,
-			moment @props.datetime
-				.format @props.format
+    render: ->
+        time
+            dateTime: @props.datetime
+            className: @props.className
+        ,
+            moment @props.datetime
+                .format @props.format

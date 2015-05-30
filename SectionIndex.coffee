@@ -11,26 +11,26 @@ _ = require('lodash')
 
 module.exports = React.createClass
 
-	displayName: 'SectionIndex'
+    displayName: 'SectionIndex'
 
-	mixins: [
-		Router.State
-		Paths
-	]
+    mixins: [
+        Router.State
+        Paths
+    ]
 
-	render: ->
-		div {className: 'grid'},
-			h1 config.theme.sectionTitle or 'Blog posts'
-			ul { className: 'post-list'},
-				_.map _.sortBy(@getSectionItems(), 'date'), (item) =>
-					li key: item.url,
-						h3 {className: 'post-list__heading'},
-							SectionLink
-								item: item
-							, item.title
-							if item.draft then span className: 'draft-text', ' Draft'
-						if item.date
-							MomentDisplay
-								datetime: item.date
-						p {className: 'post-list__preview'},
-							item.preview
+    render: ->
+        div {className: 'grid'},
+            h1 config.theme.sectionTitle or 'Blog posts'
+            ul { className: 'post-list'},
+                _.map _.sortBy(@getSectionItems(), 'date'), (item) =>
+                    li key: item.url,
+                        h3 {className: 'post-list__heading'},
+                            SectionLink
+                                item: item
+                            , item.title
+                            if item.draft then span className: 'draft-text', ' Draft'
+                        if item.date
+                            MomentDisplay
+                                datetime: item.date
+                        p {className: 'post-list__preview'},
+                            item.preview

@@ -7,11 +7,11 @@ config = require 'config'
 
 module.exports = React.createClass
 
-	displayName: 'MarkdownPage'
+    displayName: 'MarkdownPage'
 
-	mixins: [ Router.State, Paths ]
+    mixins: [ Router.State, Paths ]
 
-	render: ->
-		page = @getPage()
-		div {className: 'post post--page'},
-			div className: 'post__content', dangerouslySetInnerHTML: __html: page.content
+    render: ->
+        page = @getPage()
+        div {className: 'post post--page'},
+            div className: 'post__content', dangerouslySetInnerHTML: __html: page.content
