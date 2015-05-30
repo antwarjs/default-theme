@@ -3,7 +3,7 @@ Router = require('react-router')
 Link = React.createFactory Router.Link
 MomentDisplay = React.createFactory require('./MomentDisplay')
 Paths = require('antwar-core/PathsMixin')
-BlogLink = React.createFactory require('antwar-core/BlogLink')
+SectionLink = React.createFactory require('antwar-core/SectionLink')
 config = require 'config'
 _ = require('lodash')
 
@@ -25,7 +25,7 @@ module.exports = React.createClass
 				_.map _.sortBy(@getAllItems(), 'date'), (item) =>
 					li key: item.url,
 						h3 {className: 'post-list__heading'},
-							BlogLink
+							SectionLink
 								item: item
 							, item.title
 							if item.draft then span className: 'draft-text', ' Draft'
