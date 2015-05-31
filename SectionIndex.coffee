@@ -20,7 +20,7 @@ module.exports = React.createClass
 
     render: ->
         div {className: 'grid'},
-            h1 config.theme.sectionTitle or 'Blog posts'
+            h1 @getSectionTitle() or 'Blog posts'
             ul { className: 'post-list'},
                 _.map @getSectionItems(), (item) =>
                     li key: item.url,

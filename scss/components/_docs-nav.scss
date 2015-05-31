@@ -1,7 +1,7 @@
 .docs-nav__wrapper {
 	@media only screen and (min-width: 1050px) {
 		padding: $base-spacing-unit;
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: $half-spacing-unit;
 	}
