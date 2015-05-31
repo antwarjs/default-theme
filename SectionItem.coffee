@@ -15,7 +15,6 @@ module.exports = React.createClass
 
   render: ->
     item = @getItem()
-    console.log item.layout
     if item.layout is 'blog'
       BlogItem @props
     else if item.layout is 'docs'

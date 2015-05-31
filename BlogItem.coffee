@@ -25,7 +25,7 @@ module.exports = React.createClass
         div dangerouslySetInnerHTML: __html: item.content
       if item.date then MomentDisplay className: 'post__moment', datetime: item.date
       if author then div className: 'post__author', "Authored by #{author}"
-      if item.section is 'blog' and (item.next or item.prev)
+      if item.next or item.prev
         div className: 'prevnext',
           if item.prev
               div {className: 'prevnext__prev'},

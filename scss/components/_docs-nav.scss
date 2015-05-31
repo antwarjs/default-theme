@@ -1,0 +1,33 @@
+.docs-nav__wrapper {
+	@media only screen and (min-width: 1050px) {
+		padding: $base-spacing-unit;
+		position: absolute;
+		left: 0;
+		top: $half-spacing-unit;
+	}
+}
+.docs-nav {
+	// position: absolute;
+	// left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	// padding-top: $base-spacing-unit;
+	@media only screen and (min-width: 1050px) {
+		flex-direction: column;
+		margin-top: $base-spacing-unit;
+	}
+	@media only screen and (max-width: 500px) {
+		flex-direction: column;
+	}
+
+}
+
+.docs-nav--header {
+	margin-bottom: $half-spacing-unit;
+}
+.docs-nav__link {
+	font-size: $deci-size;
+	font-family: $small-font;
+	margin-right: $base-spacing-unit;
+}
