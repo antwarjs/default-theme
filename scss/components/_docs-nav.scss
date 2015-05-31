@@ -1,4 +1,11 @@
 .docs-nav__wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	width: auto;
+	flex-grow: 0;
+	flex-shrink: 0;
 	@media only screen and (min-width: 1050px) {
 		padding: $base-spacing-unit;
 		position: fixed;
@@ -9,11 +16,16 @@
 .docs-nav {
 	// position: absolute;
 	// left: 0;
+	max-width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+
 	// padding-top: $base-spacing-unit;
 	@media only screen and (min-width: 1050px) {
+		max-width: 200px;
 		flex-direction: column;
 		margin-top: $base-spacing-unit;
 	}
