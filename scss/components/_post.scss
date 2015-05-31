@@ -49,7 +49,7 @@
 	background-color: $brand-dark;
 	background-size: cover;
 	background-position: 50% 50%;
-	z-index: 10;
+	z-index: 300;
 	filter: brightness(0.4);
 	@include layer;
 }
@@ -62,7 +62,7 @@
 	text-align: center;
 	color: #fff;
 	transform: translateY(-50%);
-	z-index: 15;
+	z-index: 400;
 	@include layer;
 	> h1,
 	> h3  {
