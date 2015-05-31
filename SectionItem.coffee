@@ -15,9 +15,9 @@ module.exports = React.createClass
     render: ->
         item = @getItem()
         author = item.author or config.author.name
-        div {className: 'post'},
+        div className: 'post',
             if item.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{item.headerImage})"
-            h1 {className: 'post__heading'},
+            h1 className: 'post__heading',
                 item.title
             div className: 'post__content',
                 if item.draft then span className: 'draft-text', ' Draft'
