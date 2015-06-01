@@ -31,6 +31,6 @@ module.exports = React.createClass
       h1 className: 'post__heading',
         item.title
       div className: 'post__content',
-        if item.draft then span className: 'draft-text', ' Draft'
+        if item.isDraft then span className: 'draft-text', ' Draft'
         div dangerouslySetInnerHTML: __html: item.content
       if author then div className: 'post__author', "Authored by #{author}"

@@ -28,7 +28,7 @@ module.exports = React.createClass
                             SectionLink
                                 item: item
                             , item.title
-                            if item.draft then span className: 'draft-text', ' Draft'
+                            if item.isDraft then span className: 'draft-text', ' Draft'
                         if item.date
                             MomentDisplay
                                 datetime: item.date
