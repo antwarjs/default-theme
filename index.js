@@ -23,10 +23,6 @@ module.exports = {
               'css-loader!autoprefixer-loader?{browsers:["last 2 version", "ie 10", "Android 4"]}!sass-loader'),
           },
           {
-            test: /\.svg$/,
-            loader: 'raw-loader',
-          },
-          {
             test: /\.coffee$/,
             loader: 'coffee-loader'
           }
@@ -46,10 +42,6 @@ module.exports = {
               'autoprefixer-loader?{browsers:["last 2 version", "ie 10", "Android 4"]}',
               'sass-loader',
             ],
-          },
-          {
-            test: /\.svg$/,
-            loader: 'raw-loader',
           },
           {
             test: /\.coffee$/,
