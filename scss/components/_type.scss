@@ -62,7 +62,7 @@ pre, code {
 	background-color: $background-alt-color;
 	border-radius: $brand-round;
 	padding: $half-spacing-unit / 2;
-	@include font-size($deci-size);
+	@include font-size($centi-size);
 }
 pre {
 	margin-bottom: $base-spacing-unit;
