@@ -21,11 +21,11 @@ module.exports = React.createClass
       div className: 'docs-nav__wrapper',
         h4 className: 'docs-nav--header', 'Documentation'
         div className: 'docs-nav',
-          _.map sectionItems, (navItem) ->
+          _.map sectionItems, (navItem, i) ->
             if navItem.title is item.title
-              span className: "docs-nav__link docs-nav__link--current", navItem.title
+              span key: 'navItem' + i, className: "docs-nav__link docs-nav__link--current", navItem.title
             else
-              a href: "/#{navItem.url}", className: "docs-nav__link", navItem.title
+              a key: 'navItem' + i, href: "/#{navItem.url}", className: "docs-nav__link", navItem.title
 
       if item.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{item.headerImage})"
       h1 className: 'post__heading',
