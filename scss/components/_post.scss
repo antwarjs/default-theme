@@ -38,6 +38,10 @@
 			@include font-size(16px);
 		}
 	}
+	.inline-img {
+		width: 100%;
+		left: auto;
+	}
 }
 
 .header-image {
