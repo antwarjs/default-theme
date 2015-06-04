@@ -21,3 +21,13 @@
 		}
 	}
 }
+
+.front__latestpost {
+	margin-top: $base-spacing-unit;
+	font-family: $small-font;
+	font-weight: $bold;
+	color: #fff;
+	&:hover {
+		color: lighten($action-color, 20%);
+	}
+}
