@@ -19,6 +19,7 @@ module.exports = React.createClass
       if item.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{item.headerImage})"
       h1 className: 'post__heading',
         item.title
+      if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       div className: 'post__content',
         if item.isDraft then span className: 'draft-text', ' Draft'
         div dangerouslySetInnerHTML: __html: item.content
