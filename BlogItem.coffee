@@ -29,10 +29,10 @@ module.exports = React.createClass
           if item.prev
               div {className: 'prevnext__prev'},
                 div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.prev.headerImage})"}
-                span className: 'prevnext__info', 'You might also like'
+                span className: 'prevnext__info', item.previousInfo || 'You might also like'
                 a className: 'prevnext__link', href: "/#{item.prev.url}", item.prev.title
           if item.next
               div {className: 'prevnext__next'},
                 div {className: 'prevnext__bg', style: backgroundImage: "url(#{item.next.headerImage})"}
-                span className: 'prevnext__info', 'Next item'
+                span className: 'prevnext__info', item.nextInfo || 'Next item'
                 a className: 'prevnext__link', href: "/#{item.next.url}", item.next.title
