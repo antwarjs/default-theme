@@ -19,10 +19,10 @@ module.exports = React.createClass
       if item.headerImage? then div className: 'header-image', style: backgroundImage: "url(#{item.headerImage})"
       h1 className: 'post__heading',
         item.title
-      if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       div className: 'post__content',
         if item.isDraft then span className: 'draft-text', ' Draft'
         div dangerouslySetInnerHTML: __html: item.content
+      if item.headerExtra? then div className: 'header-extra', dangerouslySetInnerHTML: __html: item.headerExtra
       if item.date then MomentDisplay className: 'post__moment', datetime: item.date
       if author then div className: 'post__author', "Authored by #{author}"
       if item.next or item.prev
