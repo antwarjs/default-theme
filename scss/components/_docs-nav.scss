@@ -29,7 +29,7 @@ $docs-min-width: 225px;
 	@media only screen and (min-width: #{$max-width + $docs-min-width * 2}) {
 		max-width: $docs-min-width;
 		flex-direction: column;
-		margin-top: $base-spacing-unit;
+		margin-top: $base-spacing-unit / 2;
 	}
 	@media only screen and (max-width: #{$lap-start}) {
 		flex-direction: column;
@@ -38,7 +38,7 @@ $docs-min-width: 225px;
 }
 
 .docs-nav--header {
-	margin-bottom: $half-spacing-unit;
+	margin-bottom: 0;
 }
 .docs-nav__link {
 	font-size: $deci-size;
