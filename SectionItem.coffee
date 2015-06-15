@@ -4,7 +4,6 @@ BlogItem = React.createFactory require './BlogItem'
 DocsItem = React.createFactory require './DocsItem'
 Paths = require 'antwar-core/PathsMixin'
 Router = require 'react-router'
-config = require 'config'
 
 
 module.exports = React.createClass
