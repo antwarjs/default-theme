@@ -3,17 +3,6 @@ var _ = require('lodash');
 
 
 module.exports = {
-  handlers: {
-    sectionIndex: function() {
-      return require('./SectionIndex.coffee');
-    },
-    sectionItem: function() {
-      return require('./SectionItem.coffee');
-    },
-    body: function() {
-      return require('./Body.coffee');
-    },
-  },
   common: function() {
     return {
       resolve: {
