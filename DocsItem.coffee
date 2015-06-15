@@ -19,7 +19,7 @@ module.exports = React.createClass
     sectionItems = @getSectionItems()
     div className: 'post',
       div className: 'docs-nav__wrapper',
-        h4 className: 'docs-nav--header', 'Documentation'
+        h4 className: 'docs-nav--header', @getSectionTitle() or 'Documentation'
         div className: 'docs-nav',
           _.map sectionItems, (navItem, i) ->
             if navItem.title is item.title
