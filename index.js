@@ -10,6 +10,17 @@ module.exports = {
       }
     };
   },
+  handlers: {
+    sectionIndex: function() {
+      return require('./SectionIndex.coffee');
+    },
+    sectionItem: function() {
+      return require('./SectionItem.coffee');
+    },
+    body: function() {
+      return require('./Body.coffee');
+    },
+  },
   build: function(plugins) {
     var ExtractTextPlugin = plugins.ExtractTextPlugin;
 

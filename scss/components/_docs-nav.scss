@@ -45,3 +45,15 @@ $docs-min-width: 225px;
 	font-family: $small-font;
 	margin-right: $base-spacing-unit;
 }
+.docs-nav__wrapper--push-down {
+	margin-top: 100vh; // Adjust for header image
+	& + .header-image + .post__heading + .post__content {
+		margin-top: 0;
+	}
+	@media only screen and (min-width: #{$max-width + $docs-min-width * 2}) {
+		position: absolute;
+		& + .header-image + .post__heading + .post__content {
+			margin-top: 100vh;
+		}
+	}
+}

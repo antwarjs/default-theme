@@ -18,7 +18,7 @@ module.exports = React.createClass
     author = item.author or config.author.name
     sectionItems = @getSectionItems()
     div className: 'post',
-      div className: 'docs-nav__wrapper',
+      div className: "docs-nav__wrapper#{if item.headerImage? then ' docs-nav__wrapper--push-down' else ''}",
         h4 className: 'docs-nav--header', 'Documentation'
         div className: 'docs-nav',
           _.map sectionItems, (navItem, i) ->
