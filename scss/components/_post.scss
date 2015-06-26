@@ -78,6 +78,12 @@
     margin-top: 100vh;
     padding-top: $base-spacing-unit * 2;
 }
+
+/* given 100vw doesn't take scrollbar in count maximum width needs to be clamped */
+.header-image, .post__heading {
+    max-width: 100%;
+}
+
 .post__author,
 .post__moment {
     margin-bottom: $base-spacing-unit;
