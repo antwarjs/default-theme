@@ -9,6 +9,8 @@
 	}
 }
 .post__content {
+	margin: 0 auto;
+
 	h1,
 	h2,
 	h3,
@@ -20,7 +22,7 @@
 	ul,
 	pre {
 		width: $max-width - $base-spacing-unit * 2; // subtract .post padding
-		max-width: calc(100vw - #{$base-spacing-unit});
+		max-width: calc(100vw - #{$base-spacing-unit * 2});
 	}
 
 	img {
@@ -78,6 +80,12 @@
 	margin-top: 100vh;
 	padding-top: $base-spacing-unit * 2;
 }
+
+/* given 100vw doesn't take scrollbar in count maximum width needs to be clamped */
+.header-image, .post__heading {
+	max-width: 100%;
+}
+
 .post__author,
 .post__moment {
 	margin-bottom: $base-spacing-unit;
