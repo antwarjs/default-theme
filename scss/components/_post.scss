@@ -20,6 +20,7 @@
 	p,
 	ol,
 	ul,
+	div,
 	pre {
 		width: $max-width - $base-spacing-unit * 2; // subtract .post padding
 		max-width: calc(100vw - #{$base-spacing-unit * 2});
