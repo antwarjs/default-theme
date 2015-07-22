@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: space-between;
   margin: $base-spacing-unit * 2 0 0;
-  width: 100vw;
   left: 0;
   position: absolute;
   z-index: 200;
@@ -15,7 +14,6 @@
 .prevnext__next,
 .prevnext__prev {
   position: relative;
-  width: 50vw;
   color: #fff;
   font-family: $heading-font;
   padding: $base-spacing-unit;
@@ -53,4 +51,14 @@
 }
 .prevnext__next {
   // flex-grow: 2;
+}
+
+/* XXX: simplify by altering html structure? */
+.post__content {
+  .prevnext__prev, .prevnext__next, .prevnext, .prevnext__bg {
+    max-width: 100%;
+  }
+  .prevnext, .prevnext__bg {
+    width: 100%;
+  }
 }
