@@ -51,14 +51,14 @@ $docs-min-width: 225px;
 	line-height: 1.5;
 }
 .docs-nav__wrapper--push-down {
-	margin-top: 100vh; // Adjust for header image
+	margin-top: 73vh; // Adjust for header image
 	& + .header-image + .post__heading + .post__content {
 		margin-top: 0;
 	}
 	@media only screen and (min-width: #{$max-width + $docs-min-width * 2}) {
 		position: absolute;
 		& + .header-image + .post__heading + .post__content {
-			margin-top: 100vh;
+			margin-top: 73vh;
 		}
 	}
 }
