@@ -19,4 +19,7 @@
 	font-family: $small-font;
 	color: #c40000;
 	@include font-size($centi-size);
+	@include media-query('palm') {
+		padding: 0 $half-spacing-unit;
+	}
 }

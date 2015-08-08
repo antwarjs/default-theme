@@ -5,11 +5,12 @@
 	padding: 0 $base-spacing-unit;
 	margin-bottom: $base-spacing-unit * 3;
 	@include media-query('palm') {
-		padding: 0 $half-spacing-unit;
+		padding: 0;
 	}
 }
 .post__content {
 	margin: 0 auto;
+	position: relative;
 
 	h1,
 	h2,
@@ -23,7 +24,10 @@
 	div,
 	pre {
 		width: $max-width - $base-spacing-unit * 2; // subtract .post padding
-		max-width: calc(100vw - #{$base-spacing-unit * 2});
+		max-width: 100vw;
+		@include media-query('palm') {
+			padding: 0 $half-spacing-unit;
+		}
 	}
 
 	img {
@@ -47,6 +51,12 @@
 	}
 }
 
+.post__heading {
+	@include media-query('palm') {
+		padding: 0 $half-spacing-unit;
+	}
+}
+
 .header-image {
 	width: 100vw;
 	height: 78vh;
@@ -65,7 +75,7 @@
 	top: 0;
 	left: 0;
 	width: 100vw;
-	margin-top: calc(50vh); //Subtract footer links height
+	margin-top: calc(39vh); //Subtract footer links height
 	text-align: center;
 	color: #fff;
 	transform: translateY(-50%);
@@ -91,6 +101,9 @@
 .post__moment {
 	margin-bottom: $base-spacing-unit;
 	// padding: 0 $base-spacing-unit;
+	@include media-query('palm') {
+		padding: 0 $half-spacing-unit;
+	}
 }
 .post__author {
 	@extend time;

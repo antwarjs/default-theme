@@ -66,8 +66,13 @@ pre, code {
 }
 pre {
 	margin-bottom: $base-spacing-unit;
+	overflow-y: auto;
+	@include media-query('palm') {
+		border-radius: 0;
+	}
 }
 pre > code {
+	display: block;
 	padding: 0;
 }
 

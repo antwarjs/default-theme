@@ -14,6 +14,9 @@ $docs-min-width: 225px;
 		left: 0;
 		top: $half-spacing-unit;
 	}
+	@include media-query('palm') {
+		padding: 0 $half-spacing-unit;
+	}
 }
 .docs-nav {
 	// position: absolute;
