@@ -22,9 +22,14 @@
 	ol,
 	ul,
 	div,
-	pre {
-		width: $max-width - $base-spacing-unit * 2; // subtract .post padding
-		max-width: 100vw;
+	pre,
+	blockquote,
+	form {
+		width: 50vw;
+		max-width: 100%;
+		@include media-query('portable') {
+			width: 90vw;
+		}
 		@include media-query('palm') {
 			padding: 0 $half-spacing-unit;
 		}
