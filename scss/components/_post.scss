@@ -25,10 +25,9 @@
 	pre,
 	blockquote,
 	form {
-		width: 50vw;
 		max-width: 100%;
 		@include media-query('portable') {
-			width: 90vw;
+			max-width: $max-width;
 		}
 		@include media-query('palm') {
 			padding: 0 $half-spacing-unit;
