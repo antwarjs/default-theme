@@ -1,7 +1,7 @@
 React = require('react')
 moment = require('moment')
 
-{ div, time, header, h1 } = require 'react-coffee-elements'
+{ time } = require 'react-coffee-elements'
 
 module.exports = React.createClass
 
@@ -20,5 +20,5 @@ module.exports = React.createClass
             dateTime: @props.datetime
             className: @props.className
         ,
-            moment @props.datetime
+            moment(new Date @props.datetime)
                 .format @props.format
