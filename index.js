@@ -1,24 +1,13 @@
-'use strict';
-var _ = require('lodash');
-
-
 module.exports = {
-  common: function() {
-    return {
-      resolve: {
-        extensions: ['.coffee']
-      }
-    };
-  },
   handlers: {
     sectionIndex: function() {
-      return require('./SectionIndex.coffee');
+      return require('./SectionIndex.jsx');
     },
-    sectionItem: function() {
-      return require('./SectionItem.coffee');
+    sectionPage: function() {
+      return require('./SectionPage.jsx');
     },
     body: function() {
-      return require('./Body.coffee');
+      return require('./Body.jsx');
     },
   },
   build: function(plugins) {
@@ -32,10 +21,6 @@ module.exports = {
             loader: ExtractTextPlugin.extract(
               'style-loader',
               'css-loader?minimize!autoprefixer-loader?{browsers:["last 2 version", "ie 10", "Android 4"]}!sass-loader'),
-          },
-          {
-            test: /\.coffee$/,
-            loader: 'coffee-loader'
           }
         ]
       }
@@ -53,11 +38,7 @@ module.exports = {
               'autoprefixer-loader?{browsers:["last 2 version", "ie 10", "Android 4"]}',
               'sass-loader',
             ],
-          },
-          {
-            test: /\.coffee$/,
-            loader: 'react-hot!coffee-loader',
-          },
+          }
         ]
       }
     };
