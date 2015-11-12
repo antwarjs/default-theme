@@ -39,7 +39,7 @@ module.exports = React.createClass({
             null
           }
           {page.author ?
-            <div className="post__author">{`Authored by ${page.author}`}</div>
+            <div className="post__author">{`Authored by ${page.author}`}</div> :
             null
           }
 
