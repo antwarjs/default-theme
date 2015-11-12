@@ -32,7 +32,7 @@ module.exports = React.createClass({
                 null
               }
 
-              <p className="post-list__preview">{item.preview}</p>
+              <p className="post-list__preview">{page.preview}</p>
             </li>
           );
         })}</ul>

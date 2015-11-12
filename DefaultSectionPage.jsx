@@ -4,7 +4,7 @@ import Router from 'react-router';
 import config from 'config';
 
 module.exports = React.createClass({
-  displayName: 'DefaultSectionItem',
+  displayName: 'DefaultSectionPage',
   render() {
     const page = this.props.page;
 

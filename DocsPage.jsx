@@ -6,7 +6,7 @@ import _ from 'lodash';
 import config from 'config';
 
 module.exports = React.createClass({
-  displayName: 'DocsItem',
+  displayName: 'DocsPage',
   mixins: [Router.State],
   render() {
     const section = this.props.section;
@@ -16,13 +16,13 @@ module.exports = React.createClass({
     return (
       <div className="post">
         <div className={'docs-nav__wrapper' +
-          (item.headerImage ? ' docs-nav__wrapper--push-down' : '')}>
+          (page.headerImage ? ' docs-nav__wrapper--push-down' : '')}>
           <h4 className="docs-nav--header">{page.title || 'Documentation'}</h4>
-          <div className="docs-nav">{_.map(section.items(), (navItem, i) {
+          <div className="docs-nav">{_.map(section.pages(), (navPage, i) {
             return (
-              {navItem.title === page.title ?
-                <span key={`navItem-${i}`} className="docs-nav__link docs-nav__link--current">{navItem.title}</span> :
-                <a key={`navItem-${i}`} className="docs-nav__link">{navItem.title}</a>
+              {navPage.title === page.title ?
+                <span key={`navPage-${i}`} className="docs-nav__link docs-nav__link--current">{navPage.title}</span> :
+                <a key={`navPage-${i}`} className="docs-nav__link">{navPage.title}</a>
               }
             );
           })}</div>
@@ -35,7 +35,7 @@ module.exports = React.createClass({
           null
         }
 
-        <h1 className="post__heading">{item.title}</h1>
+        <h1 className="post__heading">{page.title}</h1>
 
         <div className="post__content">
           {page.isDraft ?
