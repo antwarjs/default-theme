@@ -1,15 +1,4 @@
 module.exports = {
-  handlers: {
-    sectionIndex: function() {
-      return require('./SectionIndex.jsx');
-    },
-    sectionPage: function() {
-      return require('./SectionPage.jsx');
-    },
-    body: function() {
-      return require('./Body.jsx');
-    },
-  },
   build: function(plugins) {
     var ExtractTextPlugin = plugins.ExtractTextPlugin;
 
