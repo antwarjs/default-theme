@@ -3,14 +3,13 @@ import NavigationLink from 'antwar-core/NavigationLink';
 import Router from 'react-router';
 import _ from 'lodash';
 
-import config from 'config';
-
 module.exports = React.createClass({
   displayName: 'DocsPage',
   mixins: [Router.State],
   render() {
     const section = this.props.section;
     const page = this.props.page;
+    const config = this.props.config;
     const author = page.author || config.author.name;
 
     return (

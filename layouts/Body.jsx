@@ -1,14 +1,6 @@
 import React from  'react';
 
-import Nav from './components/Nav';
-
-import './scss/main.scss';
-
-import config from 'config';
-
-if(config.theme.customStyles) {
-  require('customStyles/' + config.theme.customStyles);
-}
+import Nav from '../components/Nav';
 
 module.exports = React.createClass({
   displayName: 'Body',

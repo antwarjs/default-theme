@@ -1,9 +1,8 @@
 import React from 'react';
 import Router from 'react-router';
-import Moment from './components/Moment';
-import SectionLink from 'antwar-core/SectionLink';
-import config from 'config';
 import _ from 'lodash';
+import SectionLink from 'antwar-core/SectionLink';
+import Moment from '../components/Moment';
 
 module.exports = React.createClass({
   displayName: 'SectionIndex',

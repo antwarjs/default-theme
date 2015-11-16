@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Router from 'react-router';
-import config from 'config';
 
-import PrevNext from './components/PrevNext';
-import Moment from './components/Moment';
+import PrevNext from '../components/PrevNext';
+import Moment from '../components/Moment';
 
 module.exports = React.createClass({
   displayName: 'BlogPage',

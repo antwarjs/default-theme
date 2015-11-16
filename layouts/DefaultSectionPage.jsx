@@ -1,7 +1,6 @@
 import React from 'react';
-import Moment from './components/Moment';
 import Router from 'react-router';
-import config from 'config';
+import Moment from '../components/Moment';
 
 module.exports = React.createClass({
   displayName: 'DefaultSectionPage',
