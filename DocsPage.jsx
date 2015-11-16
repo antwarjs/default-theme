@@ -18,13 +18,10 @@ module.exports = React.createClass({
         <div className={'docs-nav__wrapper' +
           (page.headerImage ? ' docs-nav__wrapper--push-down' : '')}>
           <h4 className="docs-nav--header">{page.title || 'Documentation'}</h4>
-          <div className="docs-nav">{_.map(section.pages(), (navPage, i) {
-            return (
-              {navPage.title === page.title ?
+          <div className="docs-nav">{_.map(section.pages(), (navPage, i) => {
+            return navPage.title === page.title ?
                 <span key={`navPage-${i}`} className="docs-nav__link docs-nav__link--current">{navPage.title}</span> :
                 <a key={`navPage-${i}`} className="docs-nav__link">{navPage.title}</a>
-              }
-            );
           })}</div>
         </div>
 
