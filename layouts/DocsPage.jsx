@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationLink from 'antwar-core/NavigationLink';
+import {NavigationLink} from 'antwar-helpers/components';
 import _ from 'lodash';
 
 module.exports = React.createClass({

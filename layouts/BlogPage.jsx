@@ -1,6 +1,5 @@
 import React from 'react';
-import PrevNext from '../components/PrevNext';
-import Moment from '../components/Moment';
+import {Moment, PrevNext} from 'antwar-helpers/components';
 
 module.exports = React.createClass({
   displayName: 'BlogPage',
