@@ -1,11 +1,9 @@
 import React from 'react';
 import NavigationLink from 'antwar-core/NavigationLink';
-import Router from 'react-router';
 import _ from 'lodash';
 
 module.exports = React.createClass({
   displayName: 'DocsPage',
-  mixins: [Router.State],
   render() {
     const section = this.props.section;
     const page = this.props.page;

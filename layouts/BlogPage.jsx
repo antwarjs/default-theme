@@ -1,13 +1,9 @@
 import React from 'react';
-
-import Router from 'react-router';
-
 import PrevNext from '../components/PrevNext';
 import Moment from '../components/Moment';
 
 module.exports = React.createClass({
   displayName: 'BlogPage',
-  mixins: [Router.State],
   render() {
     const page = this.props.page;
 

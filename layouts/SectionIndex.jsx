@@ -6,7 +6,6 @@ import Moment from '../components/Moment';
 
 module.exports = React.createClass({
   displayName: 'SectionIndex',
-  mixins: [Paths],
   render() {
     const section = this.props.section;
 
