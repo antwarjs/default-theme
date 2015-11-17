@@ -1,5 +1,7 @@
 module.exports = {
-  layouts: require('./layouts'),
+  layouts: function() {
+    return require('./layouts');
+  },
   webpack: {
     build: function(plugins) {
       var ExtractTextPlugin = plugins.ExtractTextPlugin;
