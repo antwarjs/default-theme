@@ -1,6 +1,5 @@
 import React from 'react';
-import Router from 'react-router';
-import Moment from '../components/Moment';
+import {Moment} from 'antwar-helpers/components';
 
 module.exports = React.createClass({
   displayName: 'DefaultSectionPage',
