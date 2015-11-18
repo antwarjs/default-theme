@@ -8,7 +8,6 @@ module.exports = React.createClass({
     const section = this.props.section;
     const page = this.props.page;
     const config = this.props.config;
-    const pathPrefix = this.props.path.prefix;
     const author = page.author || config.author.name;
 
     return (
@@ -19,7 +18,7 @@ module.exports = React.createClass({
           <div className="docs-nav">{_.map(section.pages(), (navPage, i) => {
             return navPage.title === page.title ?
               <span key={`navPage-${i}`} className="docs-nav__link docs-nav__link--current">{navPage.title}</span> :
-              <a key={`navPage-${i}`} className="docs-nav__link" href={pathPrefix + navPage.url}>{navPage.title}</a>
+              <a key={`navPage-${i}`} className="docs-nav__link" href={'/' + navPage.url}>{navPage.title}</a>
           })}</div>
         </div>
 
