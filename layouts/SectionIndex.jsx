@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import {Moment, SectionLink} from 'antwar-helpers/components';
+import {Link} from 'react-router';
+import {Moment} from 'antwar-helpers/components';
 
 export default React.createClass({
   displayName: 'SectionIndex',
@@ -15,7 +16,7 @@ export default React.createClass({
           return (
             <li key={`post-list-item-${i}`}>
               <h3 className="post-list__heading">
-                <SectionLink page={page}>{page.title}</SectionLink>
+                <Link to={page.url}>{page.title}</Link>
 
                 {page.isDraft ?
                   <span className="draft-text">Draft</span> :
