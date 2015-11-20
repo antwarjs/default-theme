@@ -16,7 +16,7 @@ export default React.createClass({
           return (
             <li key={`post-list-item-${i}`}>
               <h3 className="post-list__heading">
-                <Link to={page.url}>{page.title}</Link>
+                <Link to={'/' + page.url}>{page.title}</Link>
 
                 {page.isDraft ?
                   <span className="draft-text">Draft</span> :
