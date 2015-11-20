@@ -1,7 +1,7 @@
 import React from 'react';
 import {Moment, PrevNext} from 'antwar-helpers/components';
 
-module.exports = React.createClass({
+export default React.createClass({
   displayName: 'BlogPage',
   render() {
     const page = this.props.page;

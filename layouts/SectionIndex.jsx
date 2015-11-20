@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import {Moment, SectionLink} from 'antwar-helpers/components';
 
-module.exports = React.createClass({
+export default React.createClass({
   displayName: 'SectionIndex',
   render() {
     const section = this.props.section;

@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationLink} from 'antwar-helpers/components';
 import _ from 'lodash';
 
-module.exports = React.createClass({
+export default React.createClass({
   displayName: 'DocsPage',
   render() {
     const section = this.props.section;
