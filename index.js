@@ -13,9 +13,14 @@ module.exports = {
               test: /\.scss$/,
               loader: ExtractTextPlugin.extract(
                 'style-loader',
-                'css-loader!sass-loader'),
+                'css-loader?postcss-loader!sass-loader'),
             }
           ]
+        },
+        postcss: function () {
+          return [
+            require('autoprefixer')
+          ];
         }
       };
     },
@@ -28,10 +33,16 @@ module.exports = {
               loaders: [
                 'style-loader',
                 'css-loader',
+                'postcss-loader',
                 'sass-loader',
-              ]
+              ],
             }
           ]
+        },
+        postcss: function () {
+          return [
+            require('autoprefixer')
+          ];
         }
       };
     }
