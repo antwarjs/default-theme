@@ -7,9 +7,9 @@
 @import "general/reset";
 @import "general/normalize";
 @import "general/clearfix";
-// @import "general/grid";
 @import "general/breakpoints";
 
+@import "components/header";
 @import "components/type";
 @import "components/body";
 @import "components/grid";
@@ -26,8 +26,5 @@
 
 @import "pages/front";
 
-// @import "components/btn";
-// @import "components/lists";
-// @import "components/header";
 @import "helpers/margins";
 @import "general/shame";
