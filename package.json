@@ -21,14 +21,10 @@
   },
   "homepage": "https://github.com/antwarjs/default-theme",
   "dependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer-loader": "^3.1.0",
     "lodash": ">= 3.6.0 < 4.0",
-    "moment": ">= 2.9.0 < 3.0",
     "node-sass": "^3.2.0",
-    "postcss-loader": "^0.9.1",
+    "moment": ">= 2.9.0 < 3.0",
     "sass-loader": "^3.1.1"
-  },
-  "peerDependencies": {
-    "antwar-helpers": ">= 0.0.0 < 1.0.0"
   }
 }
