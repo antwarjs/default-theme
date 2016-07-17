@@ -1,5 +1,5 @@
 module.exports = {
-  BlogPage: require('./BlogPage.jsx'),
-  DocsPage: require('./DocsPage.jsx'),
-  SectionIndex: require('./SectionIndex.jsx')
+  BlogPage: require('./BlogPage.jsx').default,
+  DocsPage: require('./DocsPage.jsx').default,
+  SectionIndex: require('./SectionIndex.jsx').default
 };
